@@ -150,10 +150,10 @@ $optParams = array(
      echo $cm;
 ?>]
 		};
-			var calendarHeight = screen.height;
-			var calendarWidth  = screen.width; 
-			$('.yearViewContainer').css( 'width', ($(window).width()-10));
-			$('.yearViewContainer').css( 'height', ($(window).height()-10));
+
+		
+		$('.yearViewDiv').css( 'width', ($(window).width()-10) + 'px');
+		$('.yearViewDiv').css( 'height', ($(window).height()-10) + 'px');
 			
 		$(function() {
 			$("#yearPlugin").yearPlanner();
@@ -164,8 +164,14 @@ $optParams = array(
 			var events = YearModel.Events;
 			for (var h in hols) $("#yearPlugin").yearPlanner('addBankHoliday', hols[h]);
 			for (var e in events) $("#yearPlugin").yearPlanner('addEvent', events[e]);
+			
 		});
 
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function() {
+		
+	});
 	</script>
 </body>
 </html>
